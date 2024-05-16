@@ -8,14 +8,21 @@ class TestBasics(unittest.TestCase):
     def test_add(self):
         self.assertEqual(add(3, 5), 8)
 
-    def test_substract(self):
-        self.assertEqual(substract(8, 5), 3)
+    def test_subtract(self):
+        self.assertEqual(subtract(8, 5), 3)
 
     def test_multiply(self):
         self.assertEqual(multiply(4, 6), 24)
 
     def test_divide(self):
         self.assertEqual(divide(12, 4), 3)
+
+    def test_in_fahrenheit(self):
+        self.assertEqual(inFahrenheit(0), 32)
+
+    def test_in_celsius(self):
+        self.assertEqual(inCelsius(32), 0)
+        self.assertAlmostEqual(inCelsius(0), -17.77777777777778)
 
     def test_umsatzsteuer_2005_18k(self):
         self.assertEqual(umsatzsteuer(18000, 2005), 3420)

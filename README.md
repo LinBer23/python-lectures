@@ -1,10 +1,10 @@
-# Python Exercises
+# Python Lectures
 
 Download:
 
     $ git clone YOUR_FORKED_REPOSITORY_URL
-    $ cd python-exercises/
+    $ cd python-lectures/
 
 Run the tests:
 
-    $ python -m unittest
+    $ python3 -m unittest

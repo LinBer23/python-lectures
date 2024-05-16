@@ -1,5 +1,5 @@
 '''
-Schreibe je eine Funtion add, substract, multiply, divide, die die
+Schreibe je eine Funtion add, subtract, multiply, divide, die die
 jeweilige Grundrechenart auf die beiden übergebenen Parameter A und B
 anwendet.
 '''
@@ -22,7 +22,7 @@ print(subtract(1,2))
 
 
 '''
-Schreibe eine Funktion, die eine Temeratur in Celsius in eine Temperatur in
+Schreibe eine Funktion, die eine Temperatur in Celsius in eine Temperatur in
 Fahrenheit umrechnet.
 '''
 def inFahrenheit(celsius):
@@ -82,6 +82,10 @@ print(isEven(3))
 Schreibe eine Funktion, die prüft, ob eine Zahl ungerade ist.
 '''
 def isOdd (a):
+   '''
+   :param num: Number to test
+   :type num: int
+   '''
    if(a % 2):
         return True
    else:
