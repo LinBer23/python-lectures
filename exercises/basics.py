@@ -6,7 +6,7 @@ anwendet.
 def add(a, b): 
     return a + b
 
-def multilpy(a,b):
+def multiply(a,b):
     return a * b
 
 def divide(a,b):
@@ -15,10 +15,6 @@ def divide(a,b):
 def subtract(a,b):
     return a - b
 
-print(add(1,2))
-print(multilpy(1,2))
-print(divide(1,2))
-print(subtract(1,2))
 
 
 '''
@@ -48,7 +44,7 @@ in Celsius umrechnet.
 
 def inCelsius(fahrenheit):
     float(fahrenheit)
-    return (fahrenheit -32)*5/9
+    return (fahrenheit -32) * 5 / 9
 
 print( inCelsius(100))
 
@@ -78,6 +74,10 @@ def isEven(a):
     '''
     pass
 print(isEven(3))
+
+
+
+
 '''
 Schreibe eine Funktion, die prüft, ob eine Zahl ungerade ist.
 '''
@@ -93,6 +93,10 @@ def isOdd (a):
 
 print(isOdd(2))
 
+
+
+
+
 '''
 :param num: Number to test
 :type num: int
@@ -103,7 +107,7 @@ pass
 
 # Kontrollfluss
 
-# if
+
 
 '''
 Schreibe eine Funkntion, die abhängig von dem als Zahl eingegebenen Monat die
@@ -161,12 +165,24 @@ der Freigrenze von 17.500 EUR (für die Steuerjahre 2003-2019) bzw. 22.000 EUR
 und keine Umsatzsteuer berechnet werden. Der Rückgabewert ist dann 0.
 '''
 def umsatzsteuer(umsatz, steuerjahr = 2024):
-    if((steuerjahr < 2024 or steuerjahr >2019) and umsatz < 17500):
+   
+    if((steuerjahr > 2019) and umsatz < 22000):
             return 0
-    elif((steuerjahr < 2024 or steuerjahr >2019) and umsatz > 17500):
-            return float(umsatz) * 0.19
-    elif((steuerjahr < 2019)):
+
+    if((steuerjahr > 2019) and umsatz > 22000):
+            return umsatz * 0.19
+    
+    if(steuerjahr > 2003 or steuerjahr < 2019 and umsatz > 17500):
+            return umsatz * 0.19
+    
+    if((steuerjahr > 2003 or steuerjahr < 2019  ) and umsatz < 17500):
             return 0
+    
+    
+
+    
+    
+
     
     '''
     :param umsatz: Umsatz im Steuerjahr
@@ -178,7 +194,7 @@ def umsatzsteuer(umsatz, steuerjahr = 2024):
     :rtype: float
     '''
     pass
-print(umsatzsteuer(20000,2022))
+print(umsatzsteuer(10000,2020))
 # match
 
 '''
@@ -232,22 +248,22 @@ durch das Wort „buzz“ ersetzt. Durch 15 teilbare Zahlen werden zu „fizz bu
 Siehe auch https://de.wikipedia.org/wiki/Fizz_buzz
 '''
 def fizzbuzz(n):
-    if(n % 3 ):
-        print(n)
-    elif(n % 3 == 0):
-        print("fizz")
-       
-    if(n % 5 == 0):
-        
-        print("buzz") 
-    if(n % 15 == 0 ):
-        print("fizz buzz")   
-    else:
-         print(n) 
+   for i in range(0,n):
+        if(i % 15 == 0 ):
+            print("fizz buzz")   
+        elif(i % 3 == 0):
+            print("fizz")
+        elif(i % 5 == 0):            
+            print("buzz") 
+        else:
+            print(i)
+
          
-   
-fizzbuzz(15)
+"""          
+"""
+fizzbuzz(22)
 # recursion
+
 
 '''
 Schreibe eine rekursive Funktion, die die N-te Fibonacci-Zahl berechnet.
@@ -273,4 +289,4 @@ def fibonacci(n):
 :return: n-th Fibonacci number
 :rtype: int
 '''
-print(fibonacci(6))
+print(fibonacci(8))
